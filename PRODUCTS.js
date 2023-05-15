@@ -4,8 +4,8 @@ export const PRODUCTS = [
     price: 84.9,
     seller: "Grivel",
     images: {
-      frontImg: "./public/1-front.jpg",
-      backImg: "./public/1-back.jpg",
+      frontImg: "./1-front.jpg",
+      backImg: "./1-back.jpg",
     },
   },
   {
@@ -13,8 +13,8 @@ export const PRODUCTS = [
     price: 136.9,
     seller: "Mammut",
     images: {
-      frontImg: "./public/2-front.jpg",
-      backImg: "./public/2-back.jpg",
+      frontImg: "./2-front.jpg",
+      backImg: "./2-back.jpg",
     },
   },
   {
@@ -22,8 +22,8 @@ export const PRODUCTS = [
     price: 76.9,
     seller: "Mammut",
     images: {
-      frontImg: "./public/3-front.jpg",
-      backImg: "./public/3-back.jpg",
+      frontImg: "./3-front.jpg",
+      backImg: "./3-back.jpg",
     },
   },
   {
@@ -31,8 +31,8 @@ export const PRODUCTS = [
     price: 107.9,
     seller: "Salewa",
     images: {
-      frontImg: "./public/4-front.jpg",
-      backImg: "./public/4-back.jpg",
+      frontImg: "./4-front.jpg",
+      backImg: "./4-back.jpg",
     },
   },
   {
@@ -40,8 +40,8 @@ export const PRODUCTS = [
     price: 49.0,
     seller: "Climbing Technology",
     images: {
-      frontImg: "./public/5-front.jpg",
-      backImg: "./public/5-back.jpg",
+      frontImg: "./5-front.jpg",
+      backImg: "./5-back.jpg",
     },
   },
   {
@@ -49,8 +49,8 @@ export const PRODUCTS = [
     price: 81.0,
     seller: "Climbing Technology",
     images: {
-      frontImg: "./public/6-front.jpg",
-      backImg: "./public/6-back.jpg",
+      frontImg: "./6-front.jpg",
+      backImg: "./6-back.jpg",
     },
   },
   {
@@ -58,8 +58,8 @@ export const PRODUCTS = [
     price: 96.0,
     seller: "CAMP",
     images: {
-      frontImg: "./public/7-front.jpg",
-      backImg: "./public/7-back.jpg",
+      frontImg: "./7-front.jpg",
+      backImg: "./7-back.jpg",
     },
   },
 
@@ -68,8 +68,8 @@ export const PRODUCTS = [
     price: 71.9,
     seller: "CAMP",
     images: {
-      frontImg: "./public/8-front.jpg",
-      backImg: "./public/8-back.jpg",
+      frontImg: "./8-front.jpg",
+      backImg: "./8-back.jpg",
     },
   },
   ,
@@ -78,8 +78,8 @@ export const PRODUCTS = [
     price: 73.9,
     seller: "Petzl",
     images: {
-      frontImg: "./public/9-front.jpg",
-      backImg: "./public/9-back.jpg",
+      frontImg: "./9-front.jpg",
+      backImg: "./9-back.jpg",
     },
   },
   {
@@ -87,8 +87,8 @@ export const PRODUCTS = [
     price: 51.9,
     seller: "Petzl",
     images: {
-      frontImg: "./public/10-front.jpg",
-      backImg: "./public/10-back.jpg",
+      frontImg: "./10-front.jpg",
+      backImg: "./10-back.jpg",
     },
   },
 ];
