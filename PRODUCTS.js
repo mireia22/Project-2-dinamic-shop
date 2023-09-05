@@ -9,7 +9,7 @@ export const PRODUCTS = [
     },
   },
   {
-    name: "Mammut Nordwand",
+    name: "Mammut Nord",
     price: 136.9,
     seller: "Mammut",
     images: {

@@ -2,46 +2,70 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
+  list-style: none;
   box-sizing: border-box;
 }
 
 :root {
-  --primary-color: rgb(255, 85, 0);
-  --secondary-color: rgba(1, 16, 42);
-  --tertiary-color: rgb(245, 234, 234);
+  --primary-color: #c23f28;
+  --secondary-color: #2b3652;
+  --tertiary-color: #7e6a3e;
+  --font-color: #e2e4e6;
 }
 body {
-  width: 100%;
   min-height: 100vh;
   font-family: "Francois One", sans-serif;
-  color: var(--secondary-color);
-  align-items: center;
-  justify-content: center;
 }
 #app {
   display: flex;
   flex-direction: column;
 }
 
-#header {
-  min-width: 100%;
-  height: 3rem;
-  padding: 1rem;
-  display: flex;
-  align-items: center;
+#header,
+#footer {
   background-color: var(--primary-color);
-  font-size: 1rem;
+  color: var(--font-color);
+}
+
+.upperheader {
+  padding: 1rem;
+  font-size: 4rem;
+  letter-spacing: 3px;
+  height: 9rem;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: var(--secondary-color);
+}
+
+.downheader {
+  border-top: 8px solid var(--tertiary-color);
+  padding: 1rem 6rem;
+  height: 6rem;
+}
+
+#footer {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  font-size: 2rem;
 }
 
 .nav {
-  width: 100%;
   display: flex;
-  justify-content: space-around;
-  margin-left: 15rem;
+  justify-content: space-between;
 }
 
 .nav > a {
-  text-decoration: none;
+  color: var(--font-color);
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: underline;
+  letter-spacing: 2px;
+  font-size: 2.8rem;
+}
+
+.nav > a:hover {
   color: var(--secondary-color);
 }
 
@@ -52,35 +76,51 @@ body {
 
 .products {
   padding: 1rem;
+  width: 100%;
 }
-
+#no-products-message {
+  font-size: 5rem;
+  text-align: center;
+  display: none;
+}
 .products-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   margin: 2rem;
-  gap: 2rem;
+  gap: 3rem;
 }
 
 .single-product {
-  box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.1);
+  width: 800px;
+  height: 1000px;
+  box-shadow: 2px 3px 2px 2px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
-  width: 100%;
-  height: 100%;
   font-size: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.single-product > h3 {
+  font-size: 3.5rem;
+  letter-spacing: 1px;
+}
+
+.single-product > h4 {
+  font-size: 4rem;
+  color: var(--primary-color);
 }
 
 .img-container {
-  max-width: 100%;
-  max-height: 60%;
+  height: 550px;
+  width: 550px;
   margin-bottom: 1rem;
-  padding-bottom: 1rem;
-  border-bottom: 2px solid var(--primary-color);
+  padding-bottom: 2rem;
+  border-bottom: 7px solid var(--primary-color);
 }
 
 .img-container > .backImg,
@@ -96,8 +136,8 @@ body {
 
 .single-product:hover h3 {
   cursor: pointer;
-  font-size: 1.5rem;
-  color: var(--primary-color);
+  font-size: 4rem;
+  color: var(--tertiary-color);
 }
 
 .single-product:hover .backImg {
@@ -108,21 +148,20 @@ body {
 }
 
 .filter {
-  max-width: 15rem;
-  color: var(--tertiary-color);
-  min-height: 100%;
+  width: 15%;
+  color: var(--font-color);
   display: flex;
   flex-direction: column;
   background-color: var(--secondary-color);
   padding: 2rem;
-  gap: 2rem;
+  gap: 6rem;
   align-items: center;
   position: relative;
+  font-size: 3.5rem;
 }
 
 .price-filter,
 .brand-filter {
-  border: none;
   padding: 0.2rem;
   display: flex;
   flex-direction: column;
@@ -133,14 +172,15 @@ body {
 .brand-filter select,
 #price-button,
 #clear {
-  border-radius: 6px;
-  padding: 0.3rem;
-  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  padding: 0.7rem;
+  border: 3px solid var(--primary-color);
   background: transparent;
-  color: var(--tertiary-color);
+  color: var(--font-color);
   outline: none;
   font-family: "Francois One", sans-serif;
   cursor: pointer;
+  font-size: 2.5rem;
 }
 
 .brand-filter option {
@@ -152,51 +192,66 @@ body {
 }
 
 #clear {
-  border: 2px solid var(--tertiary-color);
   background: var(--tertiary-color);
-  color: var(--secondary-color);
+  border: 1px solid var(--tertiary-color);
 }
 
 @media screen and (max-width: 415px) {
-  #header {
-    height: 2rem;
-    padding: 1.5rem;
+  .upperheader {
+    font-size: 1rem;
+    height: 3.5rem;
   }
-  .nav {
-    margin: auto;
-    display: inline-flex;
-    justify-content: flex-start;
-    gap: 1rem;
+
+  .downheader {
+    border-top: 3px solid var(--tertiary-color);
+    height: 2.5rem;
+    padding: 0.5rem 2rem;
+    border-bottom: 3px solid var(--tertiary-color);
+  }
+
+  #footer {
+    padding: 0.5rem;
+  }
+
+  .nav > a {
+    text-decoration: none;
+  }
+
+  #main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .products-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .single-product > h3 {
+    font-size: 1rem;
+  }
+
+  .single-product > h4 {
+    font-size: 1.2rem;
+  }
+
+  .single-product:hover h3 {
+    font-size: 1rem;
   }
 
   .filter {
     min-width: 100%;
-    min-height: 5rem;
-    position: absolute;
     padding: 1rem;
     gap: 1rem;
+    font-size: 1rem;
+    border-bottom: 3px solid var(--tertiary-color);
   }
 
-  .products {
-    padding: 0.5rem;
-    margin-top: 16rem;
-  }
-
-  .products-container {
-    grid-template-columns: repeat(2, 1fr);
-    margin: 1.5rem;
-  }
-
-  .products-container {
-    gap: 1rem;
-  }
-
-  .single-product {
+  .price-filter input,
+  .brand-filter select,
+  #price-button,
+  #clear {
+    padding: 0.3rem;
     font-size: 0.8rem;
-    gap: 0rem;
-  }
-
-  .single-product:hover h3 {
-    font-size: 1.1rem;
   }
 }

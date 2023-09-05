@@ -9,15 +9,19 @@ renderHeader();
 applyFilters();
 
 function renderHeader() {
-  const header$$ = document.querySelector("#header");
+  const upperHeader$$ = document.querySelector(".upperheader");
+  const headerTitle$$ = document.createElement("h1");
+  headerTitle$$.innerHTML = `Vertical Shop 🧗`;
+  upperHeader$$?.appendChild(headerTitle$$);
+  const downHeader$$ = document.querySelector(".downheader");
   const nav$$ = document.createElement("nav");
   nav$$.classList = "nav";
   nav$$.innerHTML = `
     <a href="#">Home</li>
     <a href="#">Products</li>
-    <a href="#">Climbing Sites</li>
+    <a href="#">Spots</li>
 `;
-  header$$.appendChild(nav$$);
+  downHeader$$.appendChild(nav$$);
 }
 
 function renderProducts(products) {
@@ -63,6 +67,7 @@ function applyFilters() {
   const select$$ = document.querySelector("#brand-filter");
   const input$$ = document.querySelector("#price-filter");
   const button$$ = document.querySelector("#price-button");
+  const noProductsMessage = document.querySelector("#no-products-message");
 
   select$$.addEventListener("change", (e) => {
     const selectedSeller = e.target.value;
@@ -77,6 +82,12 @@ function applyFilters() {
       filteredProducts = filteredProducts.filter(
         (product) => product.price <= priceValue
       );
+    }
+
+    if (filteredProducts.length === 0) {
+      noProductsMessage.style.display = "block";
+    } else {
+      noProductsMessage.style.display = "none";
     }
     renderProducts(filteredProducts);
   });
@@ -101,11 +112,20 @@ function applyFilters() {
       );
     }
 
+    if (filteredProducts.length === 0) {
+      noProductsMessage.style.display = "block";
+    } else {
+      noProductsMessage.style.display = "none";
+    }
+
     renderProducts(filteredProducts);
   });
 }
 
 function clearFilters() {
+  const noProductsMessage = document.querySelector("#no-products-message");
+  noProductsMessage.style.display = "none";
+
   const clearButton$$ = document.querySelector("#clear");
   clearButton$$.addEventListener("click", (e) => {
     const select$$ = document.querySelector("#brand-filter");
@@ -113,6 +133,7 @@ function clearFilters() {
 
     const input$$ = document.querySelector("#price-filter");
     input$$.value = "";
+
     renderProducts(PRODUCTS);
   });
 }
