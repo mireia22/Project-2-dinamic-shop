@@ -135,7 +135,7 @@ body {
 
 .single-product:hover h3 {
   cursor: pointer;
-  font-size: 4rem;
+  font-size: 2rem;
   color: var(--tertiary-color);
 }
 
