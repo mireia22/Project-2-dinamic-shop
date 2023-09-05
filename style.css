@@ -29,9 +29,9 @@ body {
 
 .upperheader {
   padding: 1rem;
-  font-size: 4rem;
+  font-size: 1.5rem;
   letter-spacing: 3px;
-  height: 9rem;
+  height: 4.5rem;
   text-align: center;
   text-transform: uppercase;
   background-color: var(--secondary-color);
@@ -39,16 +39,16 @@ body {
 
 .downheader {
   border-top: 8px solid var(--tertiary-color);
-  padding: 1rem 6rem;
-  height: 6rem;
+  padding: 0.5rem 6rem;
+  height: 3rem;
 }
 
 #footer {
   text-align: center;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
-  font-size: 2rem;
+  padding: 0.5rem;
+  font-size: 1rem;
 }
 
 .nav {
@@ -62,7 +62,7 @@ body {
   text-align: center;
   text-decoration: underline;
   letter-spacing: 2px;
-  font-size: 2.8rem;
+  font-size: 1rem;
 }
 
 .nav > a:hover {
@@ -79,7 +79,7 @@ body {
   width: 100%;
 }
 #no-products-message {
-  font-size: 5rem;
+  font-size: 2rem;
   text-align: center;
   display: none;
 }
@@ -93,11 +93,11 @@ body {
 }
 
 .single-product {
-  width: 800px;
-  height: 1000px;
+  width: 200px;
+  height: 300px;
   box-shadow: 2px 3px 2px 2px rgba(0, 0, 0, 0.2);
   border-radius: 5px;
-  font-size: 1rem;
+  font-size: 0.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -106,21 +106,20 @@ body {
 }
 
 .single-product > h3 {
-  font-size: 3.5rem;
+  font-size: 1.5rem;
   letter-spacing: 1px;
 }
 
 .single-product > h4 {
-  font-size: 4rem;
+  font-size: 1.8rem;
   color: var(--primary-color);
 }
 
 .img-container {
-  height: 550px;
-  width: 550px;
+  height: 200px;
   margin-bottom: 1rem;
   padding-bottom: 2rem;
-  border-bottom: 7px solid var(--primary-color);
+  border-bottom: 3px solid var(--primary-color);
 }
 
 .img-container > .backImg,
@@ -148,16 +147,16 @@ body {
 }
 
 .filter {
-  width: 15%;
+  width: 18%;
   color: var(--font-color);
   display: flex;
   flex-direction: column;
   background-color: var(--secondary-color);
   padding: 2rem;
-  gap: 6rem;
+  gap: 4rem;
   align-items: center;
   position: relative;
-  font-size: 3.5rem;
+  font-size: 1rem;
 }
 
 .price-filter,
@@ -173,14 +172,14 @@ body {
 #price-button,
 #clear {
   border-radius: 5px;
-  padding: 0.7rem;
-  border: 3px solid var(--primary-color);
+  padding: 0.2rem;
+  border: 2px solid var(--primary-color);
   background: transparent;
   color: var(--font-color);
   outline: none;
   font-family: "Francois One", sans-serif;
   cursor: pointer;
-  font-size: 2.5rem;
+  font-size: 1rem;
 }
 
 .brand-filter option {
