@@ -123,9 +123,6 @@ function applyFilters() {
 }
 
 function clearFilters() {
-  const noProductsMessage = document.querySelector("#no-products-message");
-  noProductsMessage.style.display = "none";
-
   const clearButton$$ = document.querySelector("#clear");
   clearButton$$.addEventListener("click", (e) => {
     const select$$ = document.querySelector("#brand-filter");
@@ -133,6 +130,8 @@ function clearFilters() {
 
     const input$$ = document.querySelector("#price-filter");
     input$$.value = "";
+    const noProductsMessage = document.querySelector("#no-products-message");
+    noProductsMessage.style.display = "none";
 
     renderProducts(PRODUCTS);
   });
